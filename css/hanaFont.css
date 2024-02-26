@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'hana';
+    font-weight: 300;
+    src: url(../font/Hana2L.woff) format("woff"),url(../font/Hana2L.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: 'hana';
+    font-weight: 400;
+    src: url(../font/Hana2M.woff) format("woff"),url(../font/Hana2M.ttf) format("ttf")
+}
+
+@font-face {
+    font-family: 'hana';
+    font-weight: 700;
+    src: url(../font/Hana2B.woff) format("woff"),url(../font/Hana2B.ttf) format("ttf")
+}

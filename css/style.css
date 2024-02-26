@@ -1,0 +1,780 @@
+@charset "utf-8";
+/* style.css */
+
+#wrap{
+    position: relative;
+    min-width: 1240px;
+    /* 최소 너비 사이즈(비율 고정?) */
+}
+#skipNavi{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+#skipNavi a{
+    position: absolute;
+    top: -30px;
+    left: 0;
+    display: block;
+    width: 148px;
+    height: 28px;
+    border: 1px solid #4ec53d;
+    background-color: #333;
+    color: #eee;
+    text-align: center;
+    line-height: 28px;
+}
+#skipNavi a:focus{
+    top: 0;
+}
+/* 헤더 */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1240px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5
+    );
+    z-index: 400;
+}
+#h_in{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1840px;
+    /* 최대 너비. 긴 디바이스에서 보더라도 크기 및 배율이 일정하게 나오기 위함. */
+    height: 83px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+.logo{
+    margin-top: 25px;
+}
+.logo a{
+    display: block;
+    width: 140px;
+    height: 28px;
+    background-image: url(../img/logo-w.svg);
+    text-indent: -9999px;
+}
+/* .gnb li{
+    float: left;
+    margin-left: 60px;
+    margin-top: 30px;
+} */
+.gnb{
+    margin-top: 32px;
+}
+.gnb ul{
+    display: flex;
+}
+.gnb li{
+    margin-left: 30px;
+    margin-right: 30px;
+    /* 간격 60px씩 떨어트릴 건데 구역을 가운데로 정렬하기 위한 방법 */
+}
+.gnb li a{
+    font-family: 'hana';
+    color: #fff;
+    font-size: 18px ;
+    font-weight: 700;
+}
+/* .h_icon div{
+    float: left;
+    margin-right: 30px;
+}
+.h_icon div:last-child{
+    margin-right: 45px;
+} */
+.h_icon{
+    display: flex;
+    margin-top: 17px;
+}
+.h_icon > div{
+    margin-left: px;
+}
+.h_icon button{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: transparent;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.h_icon button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.h_key{
+    background-image: url(../img/btn-key-info-w.svg);
+    background-repeat: no-repeat;
+}
+.h_network{
+    background-image: url(../img/btn-network-w.svg);
+    background-repeat: no-repeat;
+}
+.h_lang{
+    background-image: url(../img/btn-language-w.svg);
+    background-repeat: no-repeat;
+}
+.h_allMenu{
+    background-image: url(../img/btn-menu-w.svg);
+    background-repeat: no-repeat;
+}
+/* *헤더 .wh */
+#header .wh{
+    background-color: #fff;
+}
+#header .wh .logo a{
+    background-image: url(../img/logo.svg);
+}
+.gnb li al{
+    color:#222;
+
+}
+#header .wh .btn_key{
+    background-image: url(../img/btn-key-info.svg);
+}
+#heaer .wh .btn_network{
+    background-image: url(../img/btn-network.svg);
+}
+#heaer .wh .btn_lang{
+    background-image: url(../img/btn-language.svg);
+}
+
+#heaer .wh .btn_all{
+    background-image: url(../img/btn-menu.svg);
+}
+
+
+
+/* 본문1 */
+#main{
+    position: relative;
+}
+.main_slide{
+    position: relative;
+    background-color: #0e8b8d;
+    overflow: hidden;
+}
+.ms_img{
+    position: relative;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.ms_img_bg img{
+    width: 1920px;
+    height: auto;
+    margin-left: -360px;
+}
+/* 
+    일반적인 상황에서 1920은 사용하지 말것.
+    여기에서는 이미지가 원래 사용하려는 크기의 2배율로 제작되어 있어서 강제로 크기를 1배율로 맞추기 위해 사용한 것임.
+*/
+.ms_img_txt{
+    position: absolute;
+    top: 124px;
+    left: 0;
+}
+.ms_img_txt img{
+    width: 612px;
+    height: auto;
+}
+.ms_btn{
+    position: absolute;
+    left: 50%;
+    bottom: 92px;
+    margin-left: -600px;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 50px;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+.ms_btn .ms_bt{
+    width: 12px;
+    height: 12px;
+    text-indent: -9999px;
+}
+.ms_btn .ms_play{
+    display: none;
+    background-image: url(../img/btn-play.svg);
+}
+.ms_btn .ms_stop{
+    background-image: url(../img/btn-pause.svg);
+}
+.ms_btn .ms_prev{
+    margin-left: 18px;
+    margin-right: 15px;
+    background-image: url(../img/btn-prev.svg);
+}
+.ms_btn .ms_next{
+    margin-left: 10px;
+    background-image: url(../img/btn-next.svg);
+}
+.ms_btn .ms_pager{
+    color: rgba(255, 255, 255, 0.5);
+}
+.ms_btn .ms_pager .current{
+    color: #fff;
+}
+/* .ms_stop{
+    opacity: 1;
+}
+.ms_stop:hover {
+    opacity: 0;
+
+}
+.ms_prev{
+    opacity: 0;
+}
+.ms_prev:hover {
+    opacity: 1;
+
+} */
+
+/* 메인2 - 모집공고 */
+.recruit_notice{
+    position: absolute;
+    top: 258px;
+    right: 50%;
+    margin-right: -600px;
+    width: 222px;
+    background-color: #26797f;
+    padding: 30px;
+    border-radius: 10px;
+    color: #fff;
+}
+.recruit_notice .rn_title{
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.4em;
+}
+.recruit_notice .rn_text{
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.4em;
+}
+.recruit_notice .rn_link{
+    text-align: right;
+}
+.recruit_notice .rn_link a{
+    display: inline-block;
+    /* padding: 13px; */
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 22px;
+    padding-right: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 40px;
+    color: #fff;
+}
+
+/* 본문3 */
+.main_info{
+    margin-bottom: 90px;
+    padding-bottom: 120px;
+    background-color: #f1fbfc;
+}
+.main_info_row1{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -60px;
+    margin-bottom: 40px;
+}
+.main_info_card{
+    width: 374px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: -3px 4px 20px rgba(177, 201, 201, 0.35);
+}
+.main_info_title{
+    border-bottom: 1px solid #eee;
+}
+.main_info_title a{
+    display: block;
+    padding-left: 30px;
+    line-height: 59px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #222;
+    background-image: url(../img/arrow-right.svg);
+    background-repeat: no-repeat;
+    background-position: right 30px center;
+}
+.main_group{
+    background-image: url(../img/main2_bg_hanagroup.png);
+    background-size: 80px auto;
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+}
+.main_network{
+    background-image: url(../img/main2_bg_global.png);
+    background-size: 80px auto;
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+}
+.main_info_row1 .stock{
+    background-color: #effbf9;
+    background-image: url(../img/main2_bg_shareprice.png);
+    background-size: 240px auto;
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+}
+.main_info_txt1{
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-bottom: 26px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.4em;
+}
+.main_info_txt2{
+    padding-top: 30px;
+    padding-left: 30px;
+    margin-bottom: 35px;
+    color: #666;
+}
+.main_stock_name{
+    margin-left: 30px;
+    margin-top: 27px;
+    font-size: 16px;
+    color: #444;
+    font-weight: 600;
+}
+.main_stock_price{
+    margin-left: 30px;
+    margin-top: 27px;
+}
+.main_stock_price .num{
+    font-size: 44px;
+    line-height: 1em;
+    font-weight: 900;
+}
+.main_stock_price .won{
+    font-weight: 700;
+}
+.main_stock_lately{
+    margin-left: 30px;
+    margin-top: 52px;
+    color: #666;
+}
+.main_stock_lately span{
+    display: inline-block;
+    vertical-align: top;
+}
+.main_stock_lately .up{
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #ed1757;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    margin-top: 5px;
+    margin-left: 13px;
+    text-indent: -9999px;
+}
+.main_info_row2{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.main_info_row2 .main_info_title{
+    border-bottom: 0;
+}
+.main_report{
+    width: 787px;
+    border-radius: 10px;
+    box-shadow: -3px 4px 20px rgba(177, 201, 201, 0.35);
+    background-color: #fff;
+}
+.main_report{
+    display: flex;
+    justify-content: space-between;
+}
+.main_report > div{
+    width: 393px;
+    background-size: 140px auto;
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 27px;
+}
+.report_esg{
+    border-right: #e5e5e5;
+    background-image: url(../img/main2_bg_esg.jpg);
+}
+.report_annual{
+    background-image: url(../img/main2_bg_annual.jpg);
+}
+/* .main_report .report_esg h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.main_report .report_annual h2{
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+} */
+.btn_info{
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.btn_info p:first-child{
+    margin-bottom: 10px;
+}
+.btn_info a{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 40px;
+    border-radius: 40px;
+    line-height: 40px;
+    color: #222;
+    font-weight: 600;
+    background-color: #f2f2f2;
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+}
+.btn_info .down a{
+    background-image: url(../img/ico-download.svg);
+}
+.btn_info .cast a{
+    background-image: url(../img/ico-webcast.svg);
+}
+.main_manage{
+    background-image: url(../img/main2_bg_result.png);
+    background-size: 62px auto;
+    background-repeat: no-repeat;
+    background-position: right 30px bottom 30px;
+}
+
+/* 본문4 - 하나소식 */
+.news{
+    position: relative;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.new_title{
+    margin-bottom: 35px;
+    font-size: 30px;
+    /* font-weight: 800; */
+    line-height: 1em;
+}
+.news_list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.news_list li{
+    width: 270px;
+    /* 부모태그(li)크기를 줄인다고 해서 자식태그(img)의 크기가 바뀌지 않음. 그래서 자식 태그에 부모태그 크기에 맞추는 'with:100%, height: auto'를 써줘야함 */
+    margin-bottom: 90px;
+}
+.news_photo{
+    margin-bottom: 24px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.news_photo img{
+    width: 100%;
+    height: auto;
+    transition: 0.5s;
+}
+.news_list li:hover .news_photo img{
+    /* hover의 영역은 해당 태그가 될 수도 있고 부모태그가 될 수도 있다. 호버 다음에 쓰는 영역이 바뀌는 영역. */
+    transform: scale(1.1);
+}
+.news_cate{
+    display: inline-block;
+    border: 1px solid #0e8b8d;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 21px;
+    color: #0e8b8d;
+    font-weight: 600;
+}
+.news_content{
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    /* line-height: 1.3em ; */
+    color: #222;
+}
+.news_date{
+    /* font-size: 11px; */
+    color: #666;
+}
+.news_more{
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+.news_more a{
+    color: #222;
+    font-weight: 600;
+    /* 화살표가 클릭이 안돼도 된다면 a태그가 아닌 .news_more태그에 아래 코드들을 써도 되지만 링크영역에 포함이 되어야 한다면 꼭 a태그를 열어줄 것 */
+    padding-right: 26px;
+    background-image: url(../img/arrow-right-long.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+    /* 배경위치 값에서 숫자 0 생략 가능 */
+}
+
+/* 본문5 - 공시정보 */
+.announce{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+.announce .company{
+    position: relative;
+    width: 540px
+}
+.announce .management{
+    position: relative;
+    width: 579px
+}
+.anno_title{
+    margin-bottom: 50px;
+    font-size: 30px;
+    line-height: 1em;
+    /* background-color: lightblue; */
+}
+.company_list li{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.company_list a{
+    font-weight: 600;
+    font-size: 16px;
+    color: #222;
+}
+.company_list span{
+    /* font-size: 13px; */
+    color: #666;
+}
+.management{
+    position: relative;
+    width: 579px;
+}
+.manage_list ul{
+    display: flex;
+    justify-content: space-between;
+}
+.manage_list li{
+    width: 172px;
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+}
+.manage_title {
+    margin-bottom: 35px;
+}
+.manage_title a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.4em;
+}
+.manage_down a{
+    font-weight: 600;
+    padding-right: 26px;
+    color: #222;
+    background-image: url(../img/ico-download.svg);
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+}
+.anno_more{
+    position: absolute;
+    top: 5px;
+    right: 0px;
+}
+.anno_more a{
+    color: #222;
+    font-weight: 600;
+    padding-right: 26px;
+    background-image: url(../img/arrow-right-long.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+/* 본문6 - 채용안내 */
+.recruit{
+    background-image: url(../img/main5_bg_recruit.png);
+    background-size: 1920px auto;
+    /* background-size: cover; */
+/* 배경이미지의 크기 배율과 공간의 크기 배율이 다르더라도 무조건 공간의 크기 배율에 이미지를 빼곡하게 채워넣을 수 있음.
+단, 공간의 배율이 맞지 않는 상황에서 무조건 이미지를 채우기 때문에 이미지가 짤릴 수가 있음. */
+    background-position: center;
+}
+.recruit_in{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.recruit_txt{
+    font-size: 34px;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.4em;
+}
+.recruit_btn p:first-child{
+    margin-bottom: 16px;
+}
+.recruit_btn p a{
+    display: block;
+    padding-left: 25px;
+    width: 168px;
+    border-radius: 50px;
+    background-color: #0e8b8d;
+    line-height: 54px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+.recruit_btn .bt_wh a{
+    background-color: #fff;
+    background-image: url(../img/arrow-right-long.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    color: #222;
+
+}
+.recruit_btn .bt_gr a{
+    background-color: #292f35;
+    background-image: url(../img/arrow-right-long-w.svg);
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    color: white;
+}
+/* 푸터 */
+.goTop{
+    display: none;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+}
+.goTop a{
+    display: block;
+    width: 56px;
+    width: 56px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-image: url(../img/btn-top.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+#footer1{
+    border-bottom: 1px solid #565656;
+    background-color: #111;
+}
+#footer2{
+    padding-top: 40px;
+    padding-bottom: 50px;
+    background-color: #111;
+}
+.f_in{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#footer1 .f_in{
+    align-items: center;
+    height: 72px;
+}
+#footer2 .f_in{
+    align-items: flex-end;
+    height: 72px;
+}
+.f_menu ul{
+    display: flex;
+}
+.f_menu li{
+    margin-right: 34px;
+}
+.f_menu li a{
+    color: #aaa;
+}
+.f_menu .point a{
+    font-weight: 600;
+}
+.f_sns ul{
+    display: flex;
+}
+.f_sns li{
+    margin-left: 30px;
+}
+.f_sns li a{
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-indent: -9999px;
+}
+.f_sns .fs_youtube a{
+    background-image: url(../img/ico-youtube.svg);
+}
+.f_sns .fs_insta a{
+    background-image: url(../img/ico-instagram.svg);
+}
+.f_sns .fs_tictock a{
+    background-image: url(../img/ico-tictok.svg);
+}
+.f_sns .fs_facebook a{
+    background-image: url(../img/ico-facebook.svg);
+}
+.f_logo{
+    margin-bottom: 30px;
+    margin-top: 30px;
+    /*  */
+    width: 140px;
+    height: 28px;
+    background-image: url(../img/logo-w.svg);
+    text-indent: -9999px;
+    opacity: 0.8;
+}
+.f_info{
+    color: #888;
+    line-height: 1.6em;
+}
+.f_info .mr{
+    margin-right: 20px;
+}
+.f_mark{
+    width: 65px;
+    height: 48px;
+    text-indent: -9999px;
+    background-image: url(../img/img-accessibility.svg);
+}
